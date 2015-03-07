@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CarRent</string>
+    <string name="title_activity_activity_splash_screen">Splash screen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="splash_screen_text">Машин түрээс</string>
+    <string name="title_activity_activity_tutorial">ActivityTutorial</string>
+    <string name="title_activity_acitivity_login">AcitivityLogin</string>
+
+</resources>
