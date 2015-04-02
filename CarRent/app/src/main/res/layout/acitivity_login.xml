@@ -1,12 +1,63 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="sdeveloper.car.rent.login.ActivityLogin">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Хэрэглэгчийн нэр" />
+
+        <EditText
+            android:id="@+id/edit_text_username"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/framebutton_border"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Нууц үг" />
+
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/framebutton_border"
+            android:inputType="textPassword"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/blue_button_style"
+            android:textColor="@android:color/white"
+            android:text="Нэвтрэх" />
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/blue_button_style"
+            android:textColor="@android:color/white"
+            android:text="Бүртгүүлэх" />
+
+    </LinearLayout>
+
+</FrameLayout>

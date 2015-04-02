@@ -42,12 +42,4 @@ public class Singleton {
     public void showToast(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
-
-    public void animationStartActivity() {
-
-    }
-
-    public void animationFinishActivity() {
-    }
-
 }

@@ -4,9 +4,53 @@
     android:layout_height="match_parent"
     tools:context="sdeveloper.car.rent.tutorial.ActivityTutorial">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_tutorial"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tutorial" />
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/splash_screen_margin_bottom"
+        android:background="@android:color/transparent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/splash_screen_margin_bottom"
+            android:paddingTop="@dimen/splash_screen_margin_bottom">
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/tutorial_viewpagerindicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" />
+
+            <Button
+                android:id="@+id/tutorial_loginbutton"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/splash_screen_margin_bottom"
+                android:background="@drawable/yellow_button_style"
+                android:text="Нэвтрэх"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </FrameLayout>

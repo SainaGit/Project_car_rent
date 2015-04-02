@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tutorial_strings">
+        <item>Хурдан шуурхай үйлчилгээ</item>
+        <item>Олон төрлийн машины сонголт</item>
+        <item>Найдвартай үйлчилгээ</item>
+    </string-array>
+
+    <string-array name="tutorial_background_colors">
+        <item>#3BB9FF</item>
+        <item>#54C571</item>
+        <item>#F87217</item>
+    </string-array>
+</resources>
