@@ -1,5 +1,6 @@
 package sdeveloper.car.rent.login;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,10 +11,12 @@ import android.widget.EditText;
 
 import sdeveloper.car.rent.R;
 import sdeveloper.car.rent.application.RootActivity;
+import sdeveloper.car.rent.main.MainActivity;
+import sdeveloper.car.rent.register.ActivityRegister;
 import sdeveloper.car.rent.splashscreen.ActivitySplashScreen;
+import sdeveloper.car.rent.user.User;
 
 public class ActivityLogin extends RootActivity implements View.OnClickListener {
-
     private String USERNAME = "ulemj";
     private String PASSWORD = "12345";
 
@@ -52,16 +55,29 @@ public class ActivityLogin extends RootActivity implements View.OnClickListener 
             edittextPassword.setBackgroundResource(R.drawable.framebutton_border);
         }
 
+        //TODO Сервер лүү нэвтрэх хүсэлт явуулах.
         if(counter > 0) {
-            ActivitySplashScreen.singleton.showToast(ActivityLogin.this, "Талбарыг бүрэн бөглөнө үү !");
+            ActivitySplashScreen.singleton.showToast(ActivityLogin.this, "Талбарыг гүйцэд бөглөнө үү !");
         } else {
             if(!String.valueOf(edittextUsername.getText()).equals(USERNAME)) {
                 ActivitySplashScreen.singleton.showToast(ActivityLogin.this, "Хэрэглэгчийн нэр буруу байна !");
+                edittextUsername.setBackgroundResource(R.drawable.framebutton_border_red);
             } else {
+                edittextUsername.setBackgroundResource(R.drawable.framebutton_border);
                 if(!String.valueOf(edittextPassword.getText()).equals(PASSWORD)) {
                     ActivitySplashScreen.singleton.showToast(ActivityLogin.this, "Нууц үг буруу байна !");
+                    edittextPassword.setBackgroundResource(R.drawable.framebutton_border_red);
                 } else {
                     //TODO Үндсэн Activity руу шилжих.
+                    User user = new User();
+                    user.setUserName(USERNAME);
+                    //TODO base64
+                    user.setUserPicture("");
+                    Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    intent.putExtra("user", user);
+                    startActivity(intent);
+                    finish();
                 }
             }
         }
@@ -75,7 +91,9 @@ public class ActivityLogin extends RootActivity implements View.OnClickListener 
                 break;
             }
             case R.id.button_register : {
-
+                Intent intent = new Intent(ActivityLogin.this, ActivityRegister.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
             }
         }
     }

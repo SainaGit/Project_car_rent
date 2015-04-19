@@ -10,11 +10,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".splashscreen.ActivitySplashScreen"
-            android:label="@string/title_activity_activity_splash_screen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,6 +23,14 @@
         <activity
             android:name=".login.ActivityLogin"
             android:label="@string/title_activity_acitivity_login" >
+        </activity>
+        <activity
+            android:name=".register.ActivityRegister"
+            android:label="@string/title_activity_activity_register" >
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/title_activity_main" >
         </activity>
     </application>
 

@@ -3,6 +3,7 @@ package sdeveloper.car.rent.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.widget.Toast;
 
 import sdeveloper.car.rent.R;
@@ -20,6 +21,11 @@ public class Singleton {
         this.context = context;
         sharedPreferencesUserDatas = context.getSharedPreferences("sp_user_datas", Context.MODE_PRIVATE);
         editorUserDatas = sharedPreferencesUserDatas.edit();
+    }
+
+    public Typeface robotoMedium(Context  context) {
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Medium.ttf");
+        return typeface;
     }
 
     public static Singleton getInstance(Context context){
